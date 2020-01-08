@@ -1,0 +1,10 @@
+Bonjour
+Votre librarie doit s’appeller libasm.a
+• Vous devez rendre un main qui testera vos fonctions et compilera avec votre librairie montrer qu’elle fonctionne.
+• Vous devez écrire les fonctions suivantes :
+◦ ft_strlen (man 3 strlen)
+◦ ft_strcpy (man 3 strcpy)
+◦ ft_strcmp (man 3 strcmp)
+◦ ft_write (man 2 write)
+◦ ft_read (man 2 read)
+◦ ft_strdup (man 3 strdup, malloc autorisé)

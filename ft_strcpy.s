@@ -1,22 +1,23 @@
 section .text
-		global _ft_strcpy
-		extern _ft_strlen
+	global _ft_strcpy
 
 _ft_strcpy:
-		push rbp
-		mov rbp, rsp
+	xor rcx,rcx
+	xor rdx,rdx
+	xor rax,rax
+	cmp rsi,0
+	je end
+	jmp cpy
 
-		mov rbx, rdi
-		mov rdi, rsi
-		call _ft_strlen
-		mov rcx, rax
-		inc rcx
-		mov rsi, rdi
-		mov rdi, rbx
-		cld
-		rep movsb
-		mov rax, rbx
+incremente:
+	inc rcx
 
-		mov rsp, rbp
-		pop rbp
-		ret
+cpy:
+	mov dl,BYTE [rsi + rcx]
+	mov BYTE [rdi + rcx],dl
+	cmp dl,0
+	jnz incremente
+
+end:
+	mov rax,rdi                      ;return dest 
+	ret

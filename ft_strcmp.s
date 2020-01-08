@@ -2,11 +2,11 @@ section .text
 		global _ft_strcmp
 
 _ft_strcmp:
-		push rdi
-		push rsi
+		push rdi ;push rdi sur la stack
+		push rsi ;push rsi sur la stack
 
 loop:
-		mov al, byte[rdi]
+		mov al, byte[rdi] ;rdi = dest et rsi = src
 		cmp al, byte[rsi]
 		jne not_eq
 		cmp byte[rdi], 0
